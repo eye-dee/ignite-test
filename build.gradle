@@ -7,7 +7,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'se.igor'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
   compileOnly {
@@ -19,6 +19,10 @@ repositories {
   mavenCentral()
 }
 
+test {
+  useJUnitPlatform()
+}
+
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter'
   compileOnly 'org.projectlombok:lombok'
@@ -26,6 +30,8 @@ dependencies {
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
   compile group: 'org.apache.ignite', name: 'ignite-core', version: '2.7.0'
-  compile group: 'org.apache.ignite', name: 'ignite-spring', version: '2.7.0'
+  compile group: 'org.apache.ignite', name: 'ignite-spring-data_2.0', version: '2.7.0'
 
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }

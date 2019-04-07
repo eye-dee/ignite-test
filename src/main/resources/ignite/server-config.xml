@@ -19,7 +19,6 @@
             </property>
           </bean>
         </property>
-        <property name="localAddress" value="localhost"/>
       </bean>
     </property>
 
