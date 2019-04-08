@@ -4,7 +4,7 @@ services:
   ignite:
     image: apacheignite/ignite:latest
     environment:
-      CONFIG_URI: https://raw.githubusercontent.com/apache/ignite/master/examples/config/example-cache.xml
+      CONFIG_URI: https://raw.githubusercontent.com/sausageRoll/ignite-test/master/src/main/resources/ignite/server-config.xml
       OPTION_LIBS: ignite-log4j
     ports:
       - "47500-47509:47500-47509"
