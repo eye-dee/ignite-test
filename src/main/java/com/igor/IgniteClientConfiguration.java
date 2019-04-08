@@ -51,6 +51,8 @@ public class IgniteClientConfiguration {
     config.setCacheConfiguration(cache);
 
     config.setDiscoverySpi(discoverySpi);
+
+    config.setPeerClassLoadingEnabled(true);
     config.setDataStorageConfiguration(new DataStorageConfiguration()
         .setCheckpointReadLockTimeout(0));
     return Ignition.start(config);

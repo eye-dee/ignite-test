@@ -23,8 +23,6 @@ class EmployeeRepositoryTest {
         .isEmployed(false)
         .build());
 
-    System.out.println(saved);
-
     assertEquals(saved.getName(), repository.findById(1).get().getName());
   }
 }
