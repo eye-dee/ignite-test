@@ -47,7 +47,7 @@ public class IgniteClientConfiguration {
     CacheConfiguration<Integer, EmployeeDTO> cache = new CacheConfiguration<>("employee-cache");
     cache.setIndexedTypes(Integer.class, EmployeeDTO.class);
 
-    // config.setClientMode(true);
+    config.setClientMode(false);
     config.setCacheConfiguration(cache);
 
     config.setDiscoverySpi(discoverySpi);
